@@ -1,7 +1,3 @@
-@import "utils/general.scss";
-@import "utils/fonts.scss";
-@import "utils/mixins.scss";
-
 *,
 *::before,
 *::after {
@@ -9,7 +5,7 @@
 }
 
 body {
-  font-family: "Open Sans", "Montserrat", sans-serif;
+  font-family: "Open Sans", "Tahoma", sans-serif;
   height: 4172px; // Delete
   background-color: #fff; //Delete
 }
@@ -26,4 +22,3 @@ ul {
   padding: 0;
   list-style: none;
 }
-
