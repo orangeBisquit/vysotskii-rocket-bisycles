@@ -1,29 +1,6 @@
+@import "utils/normalize";
 @import "utils/general.scss";
 @import "utils/fonts.scss";
 @import "utils/mixins.scss";
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Open Sans", "Montserrat", sans-serif;
-  height: 4172px; // Delete
-  background-color: #fff; //Delete
-}
-
-body,
-p,
-h1, h2, h3, h4, h5, h5 {
-  margin: 0;
-	padding: 0;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
 
