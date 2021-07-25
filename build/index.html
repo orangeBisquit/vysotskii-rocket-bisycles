@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Магазин велосипедов Bicycles</title>
+
   <link rel="preload" href="fonts/open-sans-v20-300.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/open-sans-v20-300.woff" as="font" type="font/woff" crossorigin="">
   <link rel="preload" href="fonts/open-sans-v20-400.woff2" as="font" type="font/woff2" crossorigin="">
@@ -14,42 +15,66 @@
   <link rel="preload" href="fonts/open-sans-v20-600.woff" as="font" type="font/woff" crossorigin="">
   <link rel="preload" href="fonts/open-sans-v20-700.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/open-sans-v20-700.woff" as="font" type="font/woff" crossorigin="">
+
   <link rel="stylesheet" href="css/style.min.css">
-
-  <!-- Pixel Glass -->
-  <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      background-image: url("img/320.jpg");
-    }
-
-    @media (min-width: 768px) {
-      HTML {
-        background-image: url("pixelglass/768.jpg");
-      }
-    }
-
-    @media (min-width: 1440px) {
-      HTML {
-        background-image: url("pixelglass/1440.jpg");
-      }
-    }
-  </style>
-  <link rel="stylesheet" href="pixelglass/styles.css">
-  <!-- <script src="pixelglass/script.js"></script> -->
-  <!-- Pixel Glass -->
 </head>
 
 <body class="page">
   <header class="header page__header">
-    <nav class="header__nav nav">
-
-    </nav>
+    <button type="button" class="header__toggle hamburger hamburger--no-js" aria-label="Кнопка открытия/закрытия меню навигации" tabindex="2">
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+    </button>
+    <div class="header__nav-wrapper">
+      <nav class="header__nav nav nav--nojs">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#">О нас</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">Виды велосипедов</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">Видео про велосипеды</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <section class="header__promo promo">
-
+      <div class="header__promo-wrapper">
+        <div class="header__info-wrapper">
+          <div class="promo__info">
+            <a href="" class="header__logo logo" tabindex="-1">
+              <img src="img/logo.png" alt="Логотип компании Moon" width="68" height="20">
+            </a>
+            <div class="promo__header">
+              <h2>Мы продаем велосипеды</h2>
+            </div>
+            <div class="promo__descr">
+              <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+            </div>
+          </div>
+        </div>
+        <form method="post" action="https://echo.htmlacademy.ru/" class="promo__form form">
+          <div class="form__wrapper">
+            <div class="form__descr">
+              <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
+            </div>
+            <label class="visually-hidden" for="customer-name">Ваше Имя</label>
+            <input type="text" name="customer-name" id="customer-name" placeholder="Введите Ваше Имя" required="">
+            <label class="visually-hidden" for="customer-phone">Ваше Номер Телефона</label>
+            <input type="number" name="customer-phone" id="customer-phone" placeholder="Введите Ваш номер телефона" minlength="7" required="">
+            <button class="form__submit button" type="submit">Подобрать велосипед мечты</button>
+          </div>
+        </form>
+      </div>
     </section>
   </header>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

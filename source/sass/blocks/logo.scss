@@ -1,0 +1,16 @@
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 68px;
+  height: 20px;
+
+  @media (max-width: $tablet-max-width) {
+    top: 25px;
+    left: 21px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    left: 16px;
+  }
+}

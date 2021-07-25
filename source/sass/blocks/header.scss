@@ -1,0 +1,92 @@
+.header {
+  position: relative;
+  min-height: 825px;
+  background-color: $color-bg;
+
+  @media (max-width: $tablet-max-width) {
+    z-index: 0;
+    min-height: auto;
+    background-color: $color-light;
+  }
+}
+
+.header__nav-wrapper {
+  width: clamp(880px, (880 * 100% / 1440), 1200px);
+  margin: 0 auto;
+
+  @media (max-width: $tablet-max-width) {
+    width: auto;
+  }
+}
+
+.header__promo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: clamp(880px, (880 * 100% / 1440), 1000px);
+  margin: 0 auto;
+
+  @media (max-width: $tablet-max-width) {
+    width: auto;
+    flex-direction: column;
+  }
+
+  @include pseudo {
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    max-width: 1440px;
+    height: 825px;
+    background-image: url("../../img/promo-bike-desktop-1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1440px 825px;
+    transform: translateX(-50%);
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/promo-bike-desktop-2x.jpg");
+    }
+
+    @media (max-width: $tablet-max-width) {
+      display: none;
+    }
+  }
+}
+
+.header__info-wrapper {
+  min-height: 340px;
+  background-color: $color-bg;
+
+
+  @media (max-width: $tablet-max-width) {
+    position: relative;
+    z-index: -2;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    min-height: 390px;
+  }
+
+  @include pseudo {
+
+    @media (max-width: $tablet-max-width) {
+      z-index: -1;
+      top: 0;
+      left: 50%;
+      width: 100vw;
+      max-width: 767px;
+      height: 340px;
+      background-image: url("../../img/promo-bike-tablet-1x.jpg");
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: 767px 340px;
+      transform: translateX(-50%);
+    }
+
+    @media (max-width: $mobile-max-width) {
+      max-width: 319px;
+      height: 390px;
+      background-image: url("../../img/promo-bike-mobile-1x.jpg");
+      background-size: 319px 390px;
+    }
+  }
+}
