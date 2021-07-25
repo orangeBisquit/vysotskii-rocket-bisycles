@@ -16,6 +16,10 @@
 var hamburger = document.querySelector('.hamburger');
 var nav = document.querySelector('.nav');
 
+var scrollToTop = function () {
+  window.scrollTo(0, 0);
+};
+
 var toggleClass = function (element, className) {
   element.classList.toggle(className);
 };
@@ -23,6 +27,10 @@ var toggleClass = function (element, className) {
 var handleMenu = function () {
   toggleClass(hamburger, 'hamburger--active');
   toggleClass(nav, 'nav--active');
+
+  if (!hamburger.classList.contains('hamburger--active')) {
+    scrollToTop();
+  }
 };
 
 hamburger.addEventListener('click', handleMenu);
