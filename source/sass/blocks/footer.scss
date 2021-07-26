@@ -13,8 +13,6 @@
 .footer__wrapper {
   margin: 0 auto;
   width: 957px;
-  outline: 1px solid red;
-  /* DELETE */
 
   @media (max-width: $tablet-max-width) {
     width: clamp(698px, 100vw, 1000px);

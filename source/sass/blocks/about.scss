@@ -93,13 +93,13 @@
   line-height: 34px;
   text-align: center;
   letter-spacing: -0.5px;
-  @include fluid-font(1024px, 1440px, 19px, 22px);
+  @include fluid-font(1024px, 1440px, 19px, 21px);
 
   @media (max-width: $tablet-max-width) {
-    @include fluid-font(768px, 1023px, 22px, 25px);
+    @include fluid-font(768px, 1023px, 22px, 23px);
   }
 
   @media (max-width: $mobile-max-width) {
-    @include fluid-font(320px, 767px, 18px, 22px);
+    @include fluid-font(320px, 767px, 18px, 20px);
   }
 }

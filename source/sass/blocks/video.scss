@@ -1,0 +1,116 @@
+.video {
+  background-color: $color-video-bg;
+}
+
+.video__wrapper {
+  margin: 0 auto;
+  width: 929px;
+  margin-bottom: 98px;
+  padding-top: 120px;
+
+  @media (max-width: $tablet-max-width) {
+    width: 503px;
+    margin-bottom: 85px;
+    padding-top: 70px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 320px;
+    margin-bottom: 47px;
+    padding: 84px 16px 0;
+  }
+}
+
+
+.video__header h2 {
+  margin: 0;
+  margin-bottom: 20px;
+  color: $color-light;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: -0.005em;
+  text-align: center;
+
+  @media (max-width: $tablet-max-width) {
+    font-size: 24px;
+  }
+}
+
+.video__descr p {
+  width: 340px;
+  margin: 0 auto;
+  margin-bottom: -42px;
+  color: rgba($color-light, 0.7);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: -0.005em;
+
+  @media (max-width: $tablet-max-width) {
+    width: 429px;
+    margin-bottom: -45px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 100%;
+    margin-bottom: 3px;
+  }
+}
+
+.video__img {
+  position: relative;
+  top: 98px;
+  width: clamp(800px, 70%, 929px);
+  height: 522px;
+  margin: 0 auto;
+
+  @media (max-width: $tablet-max-width) {
+    top: 85px;
+    width: 503px;
+    height: 282px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    top: 47px;
+    width: 100%;
+    height: 162px;
+  }
+}
+
+.video__img img {
+  width: 100%;
+  height: 100%;
+}
+
+.video__play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65px;
+  height: 65px;
+  border: 0;
+  border-radius: 50%;
+  background-color: $color-accent;
+
+  &:hover {
+    transform: translate(-50%, -50%) scale(1.04);
+  }
+
+  &:active {
+    transform: translate(-50%, -50%) scale(0.97);
+  }
+
+  @include pseudo {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 13px;
+    height: 18px;
+    background-image: url("../../img/icon-play.svg");
+    background-size: 13px 18px;
+    background-position: center;
+  }
+}

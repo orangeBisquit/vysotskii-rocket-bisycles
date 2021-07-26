@@ -2,6 +2,14 @@
   width: 100%;
 }
 
+.location__info-wrapper {
+  padding-top: 150px;
+
+  @media (max-width: $tablet-max-width) {
+    padding-top: 70px;
+  }
+}
+
 .location__header h2 {
   margin: 0;
   margin-bottom: 30px;
