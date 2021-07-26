@@ -1,5 +1,13 @@
 .footer {
   padding-bottom: 90px;
+
+  @media (max-width: $tablet-max-width) {
+    padding-bottom: 53px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-bottom: 50px;
+  }
 }
 
 .footer__wrapper {
