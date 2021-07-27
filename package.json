@@ -21,8 +21,8 @@
     "posthtml-include": "^1.2.0",
     "stylelint": "9.10.x",
     "stylelint-config-htmlacademy": "0.1.x",
-    "eslint": "4.16.0",
-    "eslint-config-htmlacademy": "0.4.x"
+    "eslint": "7.18.0",
+    "eslint-config-htmlacademy": "4.0.2"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
