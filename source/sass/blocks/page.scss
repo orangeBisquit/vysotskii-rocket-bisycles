@@ -1,23 +1,5 @@
-.page__header {
-  &--menu-open {
-    z-index: -1;
-    position: relative;
-    overflow: hidden;
-  }
-}
-
-.page__main {
-  &--menu-open {
-    z-index: -1;
-    position: relative;
-    overflow: hidden;
-  }
-}
-
-.page__footer {
-  &--menu-open {
-    z-index: -1;
-    position: relative;
+.page {
+  &--scroll-disabled {
     overflow: hidden;
   }
 }
