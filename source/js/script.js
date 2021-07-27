@@ -1,28 +1,26 @@
 'use strict';
-var hamburger = document.querySelector('.hamburger');
-var nav = document.querySelector('.nav');
-var header = document.querySelector('.page__header');
-var main = document.querySelector('.page__main');
-var footer = document.querySelector('.page__footer');
-var navLinks = document.querySelectorAll('.nav__item a');
-console.log(navLinks);
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('.nav');
+const header = document.querySelector('.page__header');
+const main = document.querySelector('.page__main');
+const footer = document.querySelector('.page__footer');
+const navLinks = document.querySelectorAll('.nav__item a');
 
-
-var scrollToTop = function () {
+const scrollToTop = () => {
   window.scrollTo(0, 0);
 };
 
-var toggleClass = function (element, className) {
+const toggleClass = (element, className) => {
   element.classList.toggle(className);
 };
 
-var hideScroll = function () {
+const hideScroll = () => {
   toggleClass(header, 'page__header--menu-open');
   toggleClass(main, 'page__main--menu-open');
   toggleClass(footer, 'page__footer--menu-open');
 }
 
-var handleMenu = function (evt) {
+const handleMenu = (evt) => {
   toggleClass(hamburger, 'hamburger--active');
   toggleClass(nav, 'nav--active');
   hideScroll();
@@ -35,6 +33,7 @@ var handleMenu = function (evt) {
 navLinks.forEach((link) => {
   link.addEventListener('click', handleMenu);
 })
+
 hamburger.addEventListener('click', handleMenu);
 
 nav.classList.remove('nav--nojs');

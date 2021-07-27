@@ -2,7 +2,7 @@
   width: clamp(1000px, (1166 * 100% / 1440), 1166px);
   margin: 0 auto;
   padding-top: 150px;
-  padding-bottom: 138px;
+  padding-bottom: 150px;
 
   @media (max-width: $tablet-max-width) {
     width: clamp(556px, (556 * 100% / 768), 900px);
@@ -12,13 +12,13 @@
 
   @media (max-width: $mobile-max-width) {
     width: clamp(320px, 100vw, 80%);
-    padding: 70px 15px 70px 15px;
+    padding: 70px 15px 72px 15px;
   }
 }
 
 .about__header h2 {
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 47px;
   color: $color-header;
   font-weight: 600;
   font-size: 30px;
@@ -56,7 +56,7 @@
   @media (max-width: $mobile-max-width) {
     flex-direction: column;
     column-gap: 0;
-    row-gap: 35px;
+    row-gap: 34px;
   }
 }
 
@@ -64,6 +64,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: calc(263 * 100% / 1166);
 
   @media (max-width: $tablet-max-width) {
@@ -71,7 +72,9 @@
   }
 
   @media (max-width: $mobile-max-width) {
+    justify-content: flex-start;
     width: 100%;
+    height: 125px;
   }
 }
 
@@ -84,6 +87,14 @@
   line-height: 38px;
   text-align: center;
   letter-spacing: -1.27273px;
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 8px;
+  }
+}
+
+.about__item:first-child span {
+  margin-bottom: 19px;
 }
 
 .about__item p {
@@ -93,7 +104,7 @@
   line-height: 34px;
   text-align: center;
   letter-spacing: -0.5px;
-  @include fluid-font(1024px, 1440px, 19px, 21px);
+  @include fluid-font(1024px, 1440px, 19px, 22px);
 
   @media (max-width: $tablet-max-width) {
     @include fluid-font(768px, 1023px, 22px, 23px);

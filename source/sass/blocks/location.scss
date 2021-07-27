@@ -8,6 +8,10 @@
   @media (max-width: $tablet-max-width) {
     padding-top: 70px;
   }
+
+  @media (max-width: $mobile-max-width) {
+    padding: 73px 30px 0;
+  }
 }
 
 .location__header h2 {
@@ -33,7 +37,7 @@
 .location__descr p {
   width: 555px;
   margin: 0 auto;
-  margin-bottom: 42px;
+  margin-bottom: 41px;
   color: rgba($color-dark, 0.7);
   font-weight: 400;
   font-size: 17px;
@@ -47,13 +51,7 @@
   }
 
   @media (max-width: $mobile-max-width) {
-    margin-bottom: 25px;
-  }
-}
-
-.location__info-wrapper {
-  @media (max-width: $mobile-max-width) {
-    padding: 0 25px;
+    margin-bottom: 19px;
   }
 }
 
@@ -62,18 +60,18 @@
   width: 957px;
   height: 530px;
   margin: 0 auto;
-  margin-bottom: 39px;
+  margin-bottom: 30px;
 
 
   @media (max-width: $tablet-max-width) {
     width: 698px;
     height: 545px;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
   }
 
   @media (max-width: $mobile-max-width) {
     width: 320px;
     height: 250px;
-    margin-bottom: 31px;
+    margin-bottom: 22px;
   }
 }
