@@ -8,22 +8,21 @@
   <meta name="description" content="Магазин велосипедов Moon">
   <title>Магазин велосипедов Bicycles</title>
 
-  <link rel="preload" href="fonts/open-sans-v20-300.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/open-sans-v20-300.woff" as="font" type="font/woff" crossorigin>
-  <link rel="preload" href="fonts/open-sans-v20-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/open-sans-v20-400.woff" as="font" type="font/woff" crossorigin>
-  <link rel="preload" href="fonts/open-sans-v20-600.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/open-sans-v20-600.woff" as="font" type="font/woff" crossorigin>
-  <link rel="preload" href="fonts/open-sans-v20-700.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/open-sans-v20-700.woff" as="font" type="font/woff" crossorigin>
+  <link type="font/woff2" href="fonts/open-sans-v20-300.woff2" rel="preload" as="font" crossorigin>
+  <link type="font/woff" href="fonts/open-sans-v20-300.woff" rel="preload" as="font" crossorigin>
+  <link type="font/woff2" href="fonts/open-sans-v20-400.woff2" rel="preload" as="font" crossorigin>
+  <link type="font/woff" href="fonts/open-sans-v20-400.woff" rel="preload" as="font" crossorigin>
+  <link type="font/woff2" href="fonts/open-sans-v20-600.woff2" rel="preload" as="font" crossorigin>
+  <link type="font/woff" href="fonts/open-sans-v20-600.woff" rel="preload" as="font" crossorigin>
+  <link type="font/woff2" href="fonts/open-sans-v20-700.woff2" rel="preload" as="font" crossorigin>
+  <link type="font/woff" href="fonts/open-sans-v20-700.woff" rel="preload" as="font" crossorigin>
 
-  <link rel="stylesheet" href="css/style.min.css">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body class="page">
   <header class="header page__header">
-    <button type="button" class="header__toggle hamburger hamburger--no-js"
-      aria-label="Кнопка открытия/закрытия меню навигации" tabindex="2">
+    <button class="header__toggle hamburger hamburger--no-js" type="button" aria-label="Кнопка открытия/закрытия меню навигации" tabindex="2">
       <span class="hamburger__line"></span>
       <span class="hamburger__line"></span>
       <span class="hamburger__line"></span>
@@ -32,16 +31,16 @@
       <nav class="header__nav nav nav--nojs">
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="#">О нас</a>
+            <a href="#about">О нас</a>
           </li>
           <li class="nav__item">
-            <a href="#">Виды велосипедов</a>
+            <a href="#types">Виды велосипедов</a>
           </li>
           <li class="nav__item">
-            <a href="#">Видео про велосипеды</a>
+            <a href="#video">Видео про велосипеды</a>
           </li>
           <li class="nav__item">
-            <a href="#">Контакты</a>
+            <a href="#map">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -50,8 +49,12 @@
       <div class="header__promo-wrapper">
         <div class="header__info-wrapper">
           <div class="promo__info">
-            <a href="" class="header__logo logo" tabindex="-1">
-              <img src="img/logo.png" alt="Логотип компании Moon" width="68" height="21">
+            <a class="header__logo logo" href tabindex="-1">
+              <picture>
+                <source type="image/webp" srcset="img/logo-1x.webp 1x, img/logo-2x.webp 2x">
+
+                <img src="img/logo-1x.png" alt="Логотип компании Moon" loading="lazy" srcset="img/logo-1x.png 1x, img/logo-2x.png 2x" width="68" height="21">
+              </picture>
             </a>
             <div class="promo__header">
               <h2>Мы продаем велосипеды</h2>
@@ -61,16 +64,15 @@
             </div>
           </div>
         </div>
-        <form method="post" action="https://echo.htmlacademy.ru/" class="promo__form form">
+        <form class="promo__form form" method="post" action="https://echo.htmlacademy.ru/">
           <div class="form__wrapper">
             <div class="form__descr">
               <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
             </div>
             <label class="visually-hidden" for="customer-name">Ваше Имя</label>
-            <input type="text" name="customer-name" id="customer-name" placeholder="Введите Ваше Имя" required>
+            <input id="customer-name" name="customer-name" type="text" placeholder="Введите Ваше Имя" required>
             <label class="visually-hidden" for="customer-phone">Ваше Номер Телефона</label>
-            <input type="number" name="customer-phone" id="customer-phone" placeholder="Введите Ваш номер телефона"
-              minlength="7" required>
+            <input id="customer-phone" name="customer-phone" type="number" placeholder="Введите Ваш номер телефона" minlength="7" required>
             <button class="form__submit button" type="submit">Подобрать велосипед мечты</button>
           </div>
         </form>
@@ -78,7 +80,7 @@
     </section>
   </header>
   <main class="page__main">
-    <section class="about">
+    <section id="about" class="about">
       <div class="about__wrapper">
         <div class="about__header">
           <h2>Несколько фактов о нас</h2>
@@ -103,27 +105,44 @@
         </ul>
       </div>
     </section>
-    <section class="types">
+    <section id="types" class="types">
       <div class="types__wrapper">
         <div class="types__header">
           <h2>Виды велосипедов</h2>
           <ul class="types__list">
             <li class="types__item">
               <div class="types__img-wrapper decoration decoration--circle-big">
-                <img loading="lazy" src="img/types-1-desktop-1x.jpg"
-                  alt="Фото пример дорожного велосипеда" width="342" height="503">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/types-1-mobile-tablet-1x.webp 1x, img/types-1-mobile-tablet-2x.webp 2x">
+                    <source type="image/webp" srcset="img/types-1-desktop-1x.webp 1x, img/types-1-desktop-2x.webp 2x">
+
+                    <source media="(max-width: 1023px)" srcset="img/types-1-mobile-tablet-1x.jpg 1x, img/types-1-mobile-tablet-2x.jpg 2x">
+                    <img src="img/types-1-desktop-1x.jpg" alt="Фото пример дорожного велосипеда" loading="lazy" srcset="img/types-1-desktop-1x.jpg 1x, img/types-1-desktop-2x.jpg 2x" width="342" height="503">
+                  </picture>
               </div>
               <h3>Дорожный велосипед</h3>
             </li>
             <li class="types__item">
               <div class="types__img-wrapper types__img-wrapper--big decoration decoration--square">
-                <img loading="lazy" src="img/types-2-desktop-1x.jpg" alt="Фото пример горного велосипеда" width="342" height="566">
+                <picture>
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/types-2-mobile-tablet-1x.webp 1x, img/types-2-mobile-tablet-2x.webp 2x">
+                  <source type="image/webp" srcset="img/types-2-desktop-1x.webp 1x, img/types-2-desktop-2x.webp 2x">
+
+                  <source media="(max-width: 1023px)" srcset="img/types-2-mobile-tablet-1x.jpg 1x, img/types-2-mobile-tablet-2x.jpg 2x">
+                  <img src="img/types-2-desktop-1x.jpg" alt="Фото пример дорожного велосипеда" loading="lazy" srcset="img/types-2-desktop-1x.jpg 1x, img/types-2-desktop-2x.jpg 2x" width="342" height="503">
+                </picture>
               </div>
               <h3>Горный велосипед</h3>
             </li>
             <li class="types__item">
               <div class="types__img-wrapper decoration decoration--circle-small">
-                <img loading="lazy" src="img/types-3-desktop-1x.jpg" alt="Фото пример детского велосипеда" width="342" height="512">
+                <picture>
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/types-3-mobile-tablet-1x.webp 1x, img/types-3-mobile-tablet-2x.webp 2x">
+                  <source type="image/webp" srcset="img/types-3-desktop-1x.webp 1x, img/types-3-desktop-2x.webp 2x">
+
+                  <source media="(max-width: 1023px)" srcset="img/types-3-mobile-tablet-1x.jpg 1x, img/types-3-mobile-tablet-2x.jpg 2x">
+                  <img src="img/types-3-desktop-1x.jpg" alt="Фото пример дорожного велосипеда" loading="lazy" srcset="img/types-3-desktop-1x.jpg 1x, img/types-3-desktop-2x.jpg 2x" width="342" height="503">
+                </picture>
               </div>
               <h3>Детский велосипед</h3>
             </li>
@@ -133,16 +152,22 @@
     </section>
     <section class="video">
       <div class="video__wrapper">
-        <div class="video__header">
+        <div id="video" class="video__header">
           <h2>Видео про велосипеды</h2>
         </div>
         <div class="video__descr">
           <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
         </div>
         <div class="video__img">
-          <img src="img/video-desktop-1x.jpg" loading="lazy"
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/video-mobile-1x.webp 1x, img/video-mobile-2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/video-tablet-1x.webp 1x, img/video-tablet-2x.webp 2x">
+            <source type="image/webp" srcset="img/video-desktop-1x.webp 1x, img/video-desktop-2x.webp 2x">
 
-          alt="" width="929" height="522">
+            <source media="(max-width: 767px)" srcset="img/video-mobile-1x.jpg 1x, img/img/video-mobile-1x.jpg 2x">
+            <source media="(max-width: 1023px)" srcset="img/video-tablet-1x.jpg 1x, img/img/video-tablet-1x.jpg 2x">
+            <img src="img/video-desktop-1x.jpg" alt srcset="img/video-desktop-1x.jpg 1x, img/video-desktop-2x.jpg 2x" loading="lazy" width="929" height="522">
+          </picture>
 
           <button class="video__play-button" type="button" aria-label="Кнопка проигрывания видео"></button>
         </div>
@@ -153,7 +178,7 @@
     <div class="footer__wrapper">
       <section class="footer__location location">
         <div class="location__info-wrapper">
-          <div class="location__header">
+          <div id="map" class="location__header">
             <h2>Как нас найти?</h2>
           </div>
           <div class="location__descr">
@@ -161,14 +186,20 @@
           </div>
         </div>
         <div class="location__map">
-          <img loading="lazy" src="img/map-desktop-1x.jpg" srcset="img/map-desktop-1x.jpg 1x, img/map-desktop-2x.jpg 2x"
-            alt="Расположение магазина Moon на карте" width="957px" height="530px">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/map-mobile-1x.webp 1x, img/map-mobile-1x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/map-tablet-1x.webp 1x, img/map-tablet-2x.webp 2x">
+              <source type="image/webp" srcset="img/map-desktop-1x.webp 1x, img/map-desktop-1x.webp 2x">
+
+              <source media="(max-width: 767px)" srcset="img/map-mobile-1x.jpg 1x, img/map-mobile-1x.jpg 2x">
+              <source media="(max-width: 1023px)" srcset="img/map-tablet-1x.jpg 1x, img/map-tablet-1x.jpg 2x">
+              <img src="img/map-desktop-1x.jpg" alt="Расположение магазина Moon на карте" loading="lazy" srcset="img/map-desktop-1x.jpg 1x, img/map-desktop-2x.jpg 2x" width="957px" height="530px">
+            </picture>
         </div>
       </section>
       <ul class="footer__links footer-links">
         <li class="footer-links__item footer-links__item--email">
-          <a href="mailto: puteshestviemechta@gmail.ru"
-            aria-label="Наша электронная почта">puteshestviemechta@gmail.ru</a>
+          <a href="mailto: puteshestviemechta@gmail.ru" aria-label="Наша электронная почта">puteshestviemechta@gmail.ru</a>
         </li>
         <li class="footer-links__item footer-links__item--phone">
           <a href="tel:+7(499)78468446" aria-label="Наш номер телефона">+7(499)-784-684-46</a>
