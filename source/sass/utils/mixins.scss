@@ -1,5 +1,5 @@
-@mixin pseudo {
-  &::before {
+@mixin pseudo ($param: "before") {
+  &::#{$param} {
     display: block;
     position: absolute;
     content: '';

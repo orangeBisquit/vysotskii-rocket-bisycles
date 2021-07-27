@@ -76,6 +76,7 @@
   position: relative;
   width: 100%;
   padding-top: calc(503 * 100% / 342);
+  border-radius: 10px;
 
   @media (max-width: $tablet-max-width) {
     padding-top: calc(300 * 100% / 270);

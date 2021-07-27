@@ -1,5 +1,6 @@
 .footer {
   padding-bottom: 90px;
+  overflow-x: hidden;
 
   @media (max-width: $tablet-max-width) {
     padding-bottom: 53px;

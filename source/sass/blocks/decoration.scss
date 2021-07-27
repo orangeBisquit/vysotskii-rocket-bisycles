@@ -1,0 +1,78 @@
+.decoration {
+  position: relative;
+
+  &--circle-big {
+    @include pseudo {
+      top: 50%;
+      left: -60px;
+      width: 180px;
+      height: 180px;
+      margin: 0;
+      padding: 0;
+      border: 27px solid $color-accent;
+      border-radius: 50%;
+      transform: translateY(-50%);
+
+      @media (max-width: $tablet-max-width) {
+        top: auto;
+        bottom: -35px;
+        left: -35px;
+        width: 127px;
+        height: 127px;
+        border-width: 18px;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &--square {
+    @include pseudo {
+      z-index: 2;
+      top: -20px;
+      left: -20px;
+      width: 47px;
+      height: 47px;
+      border: 8px solid $color-accent;
+
+      @media (max-width: $tablet-max-width) {
+        display: none;
+      }
+    }
+
+    @include pseudo (after) {
+      z-index: 2;
+      right: -20px;
+      bottom: -20px;
+      width: 47px;
+      height: 47px;
+      border: 8px solid $color-accent;
+
+      @media (max-width: $tablet-max-width) {
+        display: none;
+      }
+    }
+  }
+
+  &--circle-small {
+    @include pseudo {
+      z-index: 2;
+      top: 10px;
+      right: -40px;
+      width: 95px;
+      height: 95px;
+      margin: 0;
+      padding: 0;
+      border: 17px solid $color-accent;
+      border-radius: 50%;
+      transform: translateY(-50%);
+
+      @media (max-width: $tablet-max-width) {
+        top: 7px;
+        right: -31px;
+        width: 68px;
+        height: 68px;
+        border-width: 13px;
+      }
+    }
+  }
+}
