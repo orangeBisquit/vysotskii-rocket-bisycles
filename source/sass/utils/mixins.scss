@@ -2,7 +2,7 @@
   &::#{$param} {
     display: block;
     position: absolute;
-    content: '';
+    content: "";
     @content;
   }
 }

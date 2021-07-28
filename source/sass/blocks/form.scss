@@ -9,6 +9,8 @@
   }
 
   @media (max-width: $mobile-max-width) {
+    max-width: none;
+    width: clamp(320px, 70%, 400px);
     padding-top: 70px;
   }
 }
@@ -31,7 +33,7 @@
   font-size: 17px;
   line-height: 28px;
   text-align: center;
-  letter-spacing: -0.005em;
+  letter-spacing: -0.01em;
 
   @media (max-width: $tablet-max-width) {
     margin-bottom: 30px;

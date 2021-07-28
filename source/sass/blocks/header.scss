@@ -67,7 +67,6 @@
   }
 
   @include pseudo {
-
     @media (max-width: $tablet-max-width) {
       z-index: -1;
       top: 0;
