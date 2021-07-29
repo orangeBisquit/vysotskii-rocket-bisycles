@@ -7,7 +7,6 @@ const page = document.querySelector('.page');
 nav.classList.remove('nav--nojs');
 hamburger.classList.remove('hamburger--no-js');
 
-// Menu Handler
 const menuCloseHandler = () => {
   hamburger.classList.remove('hamburger--active');
   nav.classList.remove('nav--active');
@@ -17,10 +16,10 @@ const menuCloseHandler = () => {
     link.removeEventListener('click', menuCloseHandler);
   });
 
-  hamburger.addEventListener('click', menuOpenHandler);
   hamburger.removeEventListener('click', menuCloseHandler);
 };
 
+// Menu Handler
 const menuOpenHandler = () => {
   hamburger.classList.add('hamburger--active');
   nav.classList.add('nav--active');
@@ -30,7 +29,6 @@ const menuOpenHandler = () => {
     link.addEventListener('click', menuCloseHandler);
   });
 
-  hamburger.removeEventListener('click', menuOpenHandler);
   hamburger.addEventListener('click', menuCloseHandler);
 };
 
