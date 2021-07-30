@@ -1,17 +1,21 @@
 .footer-links {
+  flex-wrap: wrap;
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  column-gap: 81px;
   margin: 0;
   padding: 0;
-  padding-left: 196px;
   list-style: none;
 
   @media (max-width: $tablet-max-width) {
-    padding-left: 105px;
+    margin: 0 auto;
+    width: 558px;
+    padding: 0;
   }
 
   @media (max-width: $mobile-max-width) {
+    width: auto;
     flex-direction: column;
     align-items: center;
     padding-left: 18px;
@@ -21,13 +25,16 @@
 .footer-links__item a {
   display: block;
   position: relative;
-  margin-right: 81px;
   padding: 10px;
   color: rgba($color-dark, 0.5);
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
   text-decoration: none;
+
+  @media (max-width: $tablet-max-width) {
+    margin-right: 0;
+  }
 
   @media (max-width: $mobile-max-width) {
     margin-right: 0;
@@ -53,7 +60,7 @@
   &::before {
     width: 26px;
     height: 20px;
-    background-image: url("../../img/icon-email.svg");
+    background-image: url("../img/icon-email.svg");
     background-position: center;
     background-size: 26px 20px;
   }
@@ -70,7 +77,7 @@
   &::before {
     width: 22px;
     height: 23px;
-    background-image: url("../../img/icon-phone.svg");
+    background-image: url("../img/icon-phone.svg");
     background-position: center;
     background-size: 22px 23px;
   }

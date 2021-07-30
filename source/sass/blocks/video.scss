@@ -88,12 +88,13 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   width: 65px;
   height: 65px;
   border: 0;
   border-radius: 50%;
+  cursor: pointer;
   background-color: $color-accent;
+  transform: translate(-50%, -50%);
 
   @media (max-width: $tablet-max-width) {
     width: 91px;
@@ -119,7 +120,7 @@
     transform: translate(-50%, -50%);
     width: 13px;
     height: 18px;
-    background-image: url("../../img/icon-play.svg");
+    background-image: url("../img/icon-play.svg");
     background-size: 13px 18px;
     background-position: center;
 

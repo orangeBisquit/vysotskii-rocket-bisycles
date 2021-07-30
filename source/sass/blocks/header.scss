@@ -36,14 +36,14 @@
     width: 100vw;
     max-width: 1440px;
     height: 825px;
-    background-image: url("../../img/promo-bike-desktop-1x.jpg");
+    background-image: url("../img/promo-bike-desktop-1x.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 1440px 825px;
     transform: translateX(-50%);
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/promo-bike-desktop-2x.jpg");
+      background-image: url("../img/promo-bike-desktop-2x.jpg");
     }
 
     @media (max-width: $tablet-max-width) {
@@ -74,7 +74,7 @@
       width: 100vw;
       max-width: 767px;
       height: 340px;
-      background-image: url("../../img/promo-bike-tablet-1x.jpg");
+      background-image: url("../img/promo-bike-tablet-1x.jpg");
       background-repeat: no-repeat;
       background-position: top center;
       background-size: 767px 340px;
@@ -84,7 +84,7 @@
     @media (max-width: $mobile-max-width) {
       max-width: 319px;
       height: 390px;
-      background-image: url("../../img/promo-bike-mobile-1x.jpg");
+      background-image: url("../img/promo-bike-mobile-1x.jpg");
       background-size: 319px 390px;
     }
   }
