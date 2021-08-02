@@ -72,20 +72,17 @@
       top: 0;
       left: 50%;
       width: 100vw;
-      max-width: 767px;
       height: 340px;
       background-image: url("../img/promo-bike-tablet-1x.jpg");
       background-repeat: no-repeat;
-      background-position: top center;
-      background-size: 767px 340px;
+      background-size: cover;
+      background-position: center;
       transform: translateX(-50%);
     }
 
     @media (max-width: $mobile-max-width) {
-      max-width: 319px;
       height: 390px;
       background-image: url("../img/promo-bike-mobile-1x.jpg");
-      background-size: 319px 390px;
     }
   }
 }
